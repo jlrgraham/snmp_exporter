@@ -37,6 +37,7 @@ PALOALTO_URL      := https://docs.paloaltonetworks.com/content/dam/techdocs/en_U
 PRINTER_URL       := https://ftp.pwg.org/pub/pwg/pmp/mibs/rfc3805b.mib
 SERVERTECH_URL    := 'https://cdn10.servertech.com/assets/documents/documents/817/original/Sentry3.mib'
 SERVERTECH4_URL   := 'https://cdn10.servertech.com/assets/documents/documents/815/original/Sentry4.mib'
+SUPERMICRO_URL    := https://www.supermicro.com/products/accessories/software/SNMP_MIB.ZIP
 SYNOLOGY_URL      := 'https://global.download.synology.com/download/Document/Software/DeveloperGuide/Firmware/DSM/All/enu/Synology_MIB_File.zip'
 UBNT_AIROS_URL    := https://dl.ubnt.com/firmwares/airos-ubnt-mib/ubnt-mib.zip
 UBNT_AIRFIBER_URL := https://dl.ubnt.com/firmwares/airfiber5X/v4.1.0/UBNT-MIB.txt
@@ -108,6 +109,7 @@ mibs: mib-dir \
   $(MIBDIR)/PRINTER-MIB-V2.txt \
   $(MIBDIR)/servertech-sentry3-mib \
   $(MIBDIR)/servertech-sentry4-mib \
+  $(MIBDIR)/.supermicro \
   $(MIBDIR)/.synology \
   $(MIBDIR)/UBNT-UniFi-MIB \
   $(MIBDIR)/UBNT-AirFiber-MIB \
@@ -238,6 +240,14 @@ $(MIBDIR)/servertech-sentry3-mib:
 $(MIBDIR)/servertech-sentry4-mib:
 	@echo ">> Downloading servertech-sentry4-mib"
 	@curl $(CURL_OPTS) -o $(MIBDIR)/servertech-sentry4-mib $(SERVERTECH4_URL)
+
+$(MIBDIR)/.supermicro:
+	$(eval TMP := $(shell mktemp))
+	@echo ">> Downloading supermicro to $(TMP)"
+	@curl $(CURL_OPTS) -o $(TMP) $(SUPERMICRO_URL)
+	@unzip -j -d $(MIBDIR) $(TMP) *.my
+	@rm -v $(TMP)
+	@touch $(MIBDIR)/.supermicro
 
 $(MIBDIR)/.synology:
 	$(eval TMP := $(shell mktemp))

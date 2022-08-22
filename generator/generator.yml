@@ -195,6 +195,15 @@ modules:
       ifType:
         type: EnumAsInfo
 
+# SuperMicro
+#
+# SuperMicro MIBs can be found here:
+#   https://www.supermicro.com/products/accessories/software/SNMP_MIB.ZIP
+#
+  supermicro:
+    walk:
+      - 1.3.6.1.4.1.10876.2.1.1 # smHealthObjects
+
 # Synology
 #
 # Synology MIBs can be found here:

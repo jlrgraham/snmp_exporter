@@ -4721,7 +4721,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -4740,7 +4739,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     - labelname: bsnAPIfNoiseChannelNo
@@ -4760,7 +4758,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -4778,7 +4775,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -4800,7 +4796,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -4871,7 +4866,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -4890,7 +4884,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -4909,7 +4902,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -4928,7 +4920,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -4947,7 +4938,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -4966,7 +4956,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -4985,7 +4974,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -5004,7 +4992,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -5023,7 +5010,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -5042,7 +5028,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -5061,7 +5046,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -5079,7 +5063,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -5101,7 +5084,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -5121,7 +5103,6 @@ cisco_wlc:
     indexes:
     - labelname: bsnAPDot3MacAddress
       type: PhysAddress48
-      fixed_size: 6
     - labelname: bsnAPIfSlotId
       type: gauge
     lookups:
@@ -7813,90 +7794,6 @@ if_mib:
       labelname: ifName
       oid: 1.3.6.1.2.1.31.1.1.1.1
       type: DisplayString
-infrapower_pdu:
-  walk:
-  - 1.3.6.1.4.1.34550.20.2.1.1.1.1
-  - 1.3.6.1.4.1.34550.20.2.1.1.1.13
-  - 1.3.6.1.4.1.34550.20.2.1.1.1.14
-  - 1.3.6.1.4.1.34550.20.2.1.1.1.17
-  - 1.3.6.1.4.1.34550.20.2.1.1.1.6
-  - 1.3.6.1.4.1.34550.20.2.1.1.1.7
-  get:
-  - 1.3.6.1.2.1.1.3.0
-  metrics:
-  - name: sysUpTime
-    oid: 1.3.6.1.2.1.1.3
-    type: gauge
-    help: The time (in hundredths of a second) since the network management portion
-      of the system was last re-initialized. - 1.3.6.1.2.1.1.3
-  - name: pduMainLoadVoltage
-    oid: 1.3.6.1.4.1.34550.20.2.1.1.1.13
-    type: DisplayString
-    help: The voltage measured on this PDU in tenth of Volts - 1.3.6.1.4.1.34550.20.2.1.1.1.13
-    indexes:
-    - labelname: pduIndex
-      type: gauge
-    lookups:
-    - labels:
-      - pduIndex
-      labelname: pduName
-      oid: 1.3.6.1.4.1.34550.20.2.1.1.1.6
-      type: DisplayString
-    - labels:
-      - pduIndex
-      labelname: pduLocation
-      oid: 1.3.6.1.4.1.34550.20.2.1.1.1.7
-      type: DisplayString
-    regex_extracts:
-      "":
-      - value: $1.$2
-        regex: ^(?:(.*)(.))$
-  - name: pduMainLoadAmp
-    oid: 1.3.6.1.4.1.34550.20.2.1.1.1.14
-    type: DisplayString
-    help: The current load measured on this PDU in tenth of Amps - 1.3.6.1.4.1.34550.20.2.1.1.1.14
-    indexes:
-    - labelname: pduIndex
-      type: gauge
-    lookups:
-    - labels:
-      - pduIndex
-      labelname: pduName
-      oid: 1.3.6.1.4.1.34550.20.2.1.1.1.6
-      type: DisplayString
-    - labels:
-      - pduIndex
-      labelname: pduLocation
-      oid: 1.3.6.1.4.1.34550.20.2.1.1.1.7
-      type: DisplayString
-    regex_extracts:
-      "":
-      - value: $1.$2
-        regex: ^(?:(.*)(.))$
-  - name: pduMainActivePower
-    oid: 1.3.6.1.4.1.34550.20.2.1.1.1.17
-    type: DisplayString
-    help: The active power consumption of this PDU in hundred-thousandth of kW - 1.3.6.1.4.1.34550.20.2.1.1.1.17
-    indexes:
-    - labelname: pduIndex
-      type: gauge
-    lookups:
-    - labels:
-      - pduIndex
-      labelname: pduName
-      oid: 1.3.6.1.4.1.34550.20.2.1.1.1.6
-      type: DisplayString
-    - labels:
-      - pduIndex
-      labelname: pduLocation
-      oid: 1.3.6.1.4.1.34550.20.2.1.1.1.7
-      type: DisplayString
-    regex_extracts:
-      "":
-      - value: 0$1.$2
-        regex: ^(?:(\d*?)(\d{2}))$
-      - value: 0.0$1
-        regex: ^(?:^(\d))$
 keepalived:
   walk:
   - 1.3.6.1.2.1.207.1.2.5
@@ -15231,7 +15128,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabIface
@@ -15241,7 +15137,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabStrength
@@ -15251,7 +15146,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabTxBytes
@@ -15261,7 +15155,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabRxBytes
@@ -15271,7 +15164,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabTxPackets
@@ -15281,7 +15173,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabRxPackets
@@ -15291,7 +15182,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabTxRate
@@ -15301,7 +15191,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabRxRate
@@ -15311,7 +15200,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabRouterOSVersion
@@ -15321,7 +15209,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabUptime
@@ -15331,7 +15218,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabSignalToNoise
@@ -15341,7 +15227,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabTxStrengthCh0
@@ -15351,7 +15236,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabRxStrengthCh0
@@ -15361,7 +15245,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabTxStrengthCh1
@@ -15371,7 +15254,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabRxStrengthCh1
@@ -15381,7 +15263,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabTxStrengthCh2
@@ -15391,7 +15272,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabRxStrengthCh2
@@ -15401,7 +15281,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabTxStrength
@@ -15411,7 +15290,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlRtabRadioName
@@ -15421,7 +15299,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlRtabIface
       type: gauge
   - name: mtxrWlApIndex
@@ -15512,7 +15389,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabIface
@@ -15522,7 +15398,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabUptime
@@ -15532,7 +15407,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabTxBytes
@@ -15542,7 +15416,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabRxBytes
@@ -15552,7 +15425,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabTxPackets
@@ -15562,7 +15434,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabRxPackets
@@ -15572,7 +15443,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabTxRate
@@ -15582,7 +15452,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabRxRate
@@ -15592,7 +15461,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabTxStrength
@@ -15602,7 +15470,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabRxStrength
@@ -15612,7 +15479,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabSsid
@@ -15622,7 +15488,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabEapIdent
@@ -15632,7 +15497,6 @@ mikrotik:
     indexes:
     - labelname: mtxrWlCMRtabAddr
       type: PhysAddress48
-      fixed_size: 6
     - labelname: mtxrWlCMRtabIface
       type: gauge
   - name: mtxrWlCMRtabEntryCount
@@ -24958,6 +24822,90 @@ servertech_sentry4:
       21: nvmFail
       22: profileError
       23: conflict
+supermicro:
+  walk:
+  - 1.3.6.1.4.1.10876.2.1.1
+  metrics:
+  - name: smHealthMonitorIndex
+    oid: 1.3.6.1.4.1.10876.2.1.1.1.1.1
+    type: gauge
+    help: The unique value which identifies this Monitor device. - 1.3.6.1.4.1.10876.2.1.1.1.1.1
+    indexes:
+    - labelname: smHealthMonitorIndex
+      type: gauge
+  - name: smHealthMonitorName
+    oid: 1.3.6.1.4.1.10876.2.1.1.1.1.2
+    type: DisplayString
+    help: A textual full name assigned to the Monitor device - 1.3.6.1.4.1.10876.2.1.1.1.1.2
+    indexes:
+    - labelname: smHealthMonitorIndex
+      type: gauge
+  - name: smHealthMonitorType
+    oid: 1.3.6.1.4.1.10876.2.1.1.1.1.3
+    type: gauge
+    help: Identifies this Monitor device type. - 1.3.6.1.4.1.10876.2.1.1.1.1.3
+    indexes:
+    - labelname: smHealthMonitorIndex
+      type: gauge
+  - name: smHealthMonitorReading
+    oid: 1.3.6.1.4.1.10876.2.1.1.1.1.4
+    type: gauge
+    help: Indicates the value from the Monitor device that are currently in use on
+      the managed device - 1.3.6.1.4.1.10876.2.1.1.1.1.4
+    indexes:
+    - labelname: smHealthMonitorIndex
+      type: gauge
+  - name: smHealthMonitorHighLimit
+    oid: 1.3.6.1.4.1.10876.2.1.1.1.1.5
+    type: gauge
+    help: Indicates the value for the High limitation for the Monitor device that
+      are currently in use on the managed device - 1.3.6.1.4.1.10876.2.1.1.1.1.5
+    indexes:
+    - labelname: smHealthMonitorIndex
+      type: gauge
+  - name: smHealthMonitorLowLimit
+    oid: 1.3.6.1.4.1.10876.2.1.1.1.1.6
+    type: gauge
+    help: Indicates the value for the Low limitation for the Monitor device that are
+      currently in use on the managed device - 1.3.6.1.4.1.10876.2.1.1.1.1.6
+    indexes:
+    - labelname: smHealthMonitorIndex
+      type: gauge
+  - name: smHealthMonitorMaxReading
+    oid: 1.3.6.1.4.1.10876.2.1.1.1.1.7
+    type: gauge
+    help: Indicates the value for the possible Maximum reading value for the Monitor
+      device that are currently in use on the managed device - 1.3.6.1.4.1.10876.2.1.1.1.1.7
+    indexes:
+    - labelname: smHealthMonitorIndex
+      type: gauge
+  - name: smHealthMonitorMinReading
+    oid: 1.3.6.1.4.1.10876.2.1.1.1.1.8
+    type: gauge
+    help: Indicates the value for the possible Minimum reading value for the Monitor
+      device that are currently in use on the managed device - 1.3.6.1.4.1.10876.2.1.1.1.1.8
+    indexes:
+    - labelname: smHealthMonitorIndex
+      type: gauge
+  - name: smHealthMonitorDivisor
+    oid: 1.3.6.1.4.1.10876.2.1.1.1.1.9
+    type: gauge
+    help: Indicates the value for the Divisor for the Fan device that are currently
+      in use on the managed device - 1.3.6.1.4.1.10876.2.1.1.1.1.9
+    indexes:
+    - labelname: smHealthMonitorIndex
+      type: gauge
+  - name: smHealthMonitorMonitor
+    oid: 1.3.6.1.4.1.10876.2.1.1.1.1.10
+    type: gauge
+    help: Indicates the monitoring status for the Fan device that are currently in
+      use on the managed device - 1.3.6.1.4.1.10876.2.1.1.1.1.10
+    indexes:
+    - labelname: smHealthMonitorIndex
+      type: gauge
+    enum_values:
+      1: "true"
+      2: "false"
 synology:
   walk:
   - 1.3.6.1.2.1.2
@@ -30615,7 +30563,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaName
     oid: 1.3.6.1.4.1.41112.1.4.7.1.2
     type: DisplayString
@@ -30625,7 +30572,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaSignal
     oid: 1.3.6.1.4.1.41112.1.4.7.1.3
     type: gauge
@@ -30635,7 +30581,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaNoiseFloor
     oid: 1.3.6.1.4.1.41112.1.4.7.1.4
     type: gauge
@@ -30645,7 +30590,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaDistance
     oid: 1.3.6.1.4.1.41112.1.4.7.1.5
     type: gauge
@@ -30655,7 +30599,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaCcq
     oid: 1.3.6.1.4.1.41112.1.4.7.1.6
     type: gauge
@@ -30665,7 +30608,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaAmp
     oid: 1.3.6.1.4.1.41112.1.4.7.1.7
     type: gauge
@@ -30675,7 +30617,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaAmq
     oid: 1.3.6.1.4.1.41112.1.4.7.1.8
     type: gauge
@@ -30685,7 +30626,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaAmc
     oid: 1.3.6.1.4.1.41112.1.4.7.1.9
     type: gauge
@@ -30695,7 +30635,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaLastIp
     oid: 1.3.6.1.4.1.41112.1.4.7.1.10
     type: InetAddressIPv4
@@ -30705,7 +30644,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaTxRate
     oid: 1.3.6.1.4.1.41112.1.4.7.1.11
     type: gauge
@@ -30715,7 +30653,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaRxRate
     oid: 1.3.6.1.4.1.41112.1.4.7.1.12
     type: gauge
@@ -30725,7 +30662,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaTxBytes
     oid: 1.3.6.1.4.1.41112.1.4.7.1.13
     type: counter
@@ -30735,7 +30671,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaRxBytes
     oid: 1.3.6.1.4.1.41112.1.4.7.1.14
     type: counter
@@ -30745,7 +30680,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaConnTime
     oid: 1.3.6.1.4.1.41112.1.4.7.1.15
     type: gauge
@@ -30755,7 +30689,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaLocalCINR
     oid: 1.3.6.1.4.1.41112.1.4.7.1.16
     type: gauge
@@ -30765,7 +30698,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaTxCapacity
     oid: 1.3.6.1.4.1.41112.1.4.7.1.17
     type: gauge
@@ -30775,7 +30707,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaRxCapacity
     oid: 1.3.6.1.4.1.41112.1.4.7.1.18
     type: gauge
@@ -30785,7 +30716,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaTxAirtime
     oid: 1.3.6.1.4.1.41112.1.4.7.1.19
     type: gauge
@@ -30795,7 +30725,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaRxAirtime
     oid: 1.3.6.1.4.1.41112.1.4.7.1.20
     type: gauge
@@ -30805,7 +30734,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntStaTxLatency
     oid: 1.3.6.1.4.1.41112.1.4.7.1.21
     type: gauge
@@ -30815,7 +30743,6 @@ ubiquiti_airmax:
       type: gauge
     - labelname: ubntStaMac
       type: PhysAddress48
-      fixed_size: 6
   - name: ubntHostLocaltime
     oid: 1.3.6.1.4.1.41112.1.4.8.1
     type: DisplayString
