@@ -174,6 +174,7 @@ Put the extracted mibs in a location NetSNMP can read them from. `$HOME/.snmp/mi
 * Ubiquiti Networks: http://dl.ubnt-ut.com/snmp/UBNT-MIB
                      http://dl.ubnt-ut.com/snmp/UBNT-UniFi-MIB
                      https://dl.ubnt.com/firmwares/airos-ubnt-mib/ubnt-mib.zip
+* CyberPower: https://www.cyberpowersystems.com/products/software/mib-files/
 
 https://github.com/librenms/librenms/tree/master/mibs can also be a good source of MIBs.
 

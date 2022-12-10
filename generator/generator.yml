@@ -717,6 +717,22 @@ modules:
   cyberpower:
     version: 1
     walk:
+      - sysUpTime
+      - interfaces
+      - ifXTable
       - 1.3.6.1.4.1.3808.1.1.1 # ups
       - 1.3.6.1.4.1.3808.1.1.4 # environmentSensor
       - 1.3.6.1.4.1.3808.1.1.6 # ePDU2
+    overrides:
+      "1.3.6.1.4.1.3808.1.1.1.2.2.5": # upsAdvanceBatteryReplaceIndicator
+        type: EnumAsStateSet
+      "1.3.6.1.4.1.3808.1.1.1.3.2.6": # upsAdvanceInputStatus
+        type: EnumAsStateSet
+      "1.3.6.1.4.1.3808.1.1.1.4.1.1": # upsBaseOutputStatus
+        type: EnumAsStateSet
+      "1.3.6.1.4.1.3808.1.1.1.7.2.3": # upsAdvanceTestDiagnosticsResults
+        type: EnumAsStateSet
+      "1.3.6.1.4.1.3808.1.1.1.10.1": # upsStatus
+        type: EnumAsStateSet
+      "1.3.6.1.4.1.3808.1.1.6.9.4.1.16": # ePDU2SourceStatusRedundancyState
+        type: EnumAsStateSet
